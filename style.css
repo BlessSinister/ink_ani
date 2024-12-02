@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'HallowedGrounds';
+  src: url('./HallowedGrounds.otf');
+}
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-size: 22px;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+.banner .content .title {
+  font-family: 'HallowedGrounds';
+}
+.title {
+  font-size: 82px;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('./anime-moon-landscape.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  mask-image: url('./ink.gif');
+  mask-size: cover;
+  mask-position: center;
+}
